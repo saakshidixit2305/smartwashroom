@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:sw2/src/ui/pages/home.dart';
 void main() => runApp(MaterialApp(
   home: SplashScreen(),
   debugShowCheckedModeBanner: false,
