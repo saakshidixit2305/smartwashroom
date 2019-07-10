@@ -19,7 +19,7 @@ class _IntroState extends State<Intro> {
     slides.add(
       new Slide(
         title: "Smart Washoom",
-        description: "Auto Dectection and Alertness system through real time monitoring",
+        description: "Auto Dectection of Ammonia gas and Alertness system through real time monitoring",
         pathImage: "assets/slider_home.png",
         backgroundColor: Color(0xff212121),
           styleDescription: TextStyle(color: Colors.white),
@@ -29,7 +29,7 @@ class _IntroState extends State<Intro> {
     slides.add(
       new Slide(
         title: "Smart Washoom",
-        description: "Ye indulgence unreserved connection alteration appearance",
+        description: "Efficient removal of germs using Ultraviolet lamps",
         pathImage: "assets/slider_security.png",
         backgroundColor: Color(0xff212121),
           styleDescription: TextStyle(color: Colors.white),
@@ -40,7 +40,7 @@ class _IntroState extends State<Intro> {
       new Slide(
         title: "Smart Washoom",
         description:
-        "Much evil soon high in hope do view. Out may few northward believing attempted. Yet timed being songs marry one defer men our. Although finished blessing do of",
+        " Efficient stain removal using Spraying mechanism and conduction of cleaning processes at regular intervals",
         pathImage: "assets/slider_analysis.png",
         backgroundColor: Color(0xff212121),
         styleDescription: TextStyle(color: Colors.white),
