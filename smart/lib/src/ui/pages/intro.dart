@@ -22,6 +22,8 @@ class _IntroState extends State<Intro> {
         description: "Auto Dectection and Alertness system through real time monitoring",
         pathImage: "assets/slider_home.png",
         backgroundColor: Color(0xff212121),
+          styleDescription: TextStyle(color: Colors.white),
+          styleTitle: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)
       ),
     );
     slides.add(
@@ -30,6 +32,8 @@ class _IntroState extends State<Intro> {
         description: "Ye indulgence unreserved connection alteration appearance",
         pathImage: "assets/slider_security.png",
         backgroundColor: Color(0xff212121),
+          styleDescription: TextStyle(color: Colors.white),
+          styleTitle: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)
       ),
     );
     slides.add(
