@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(Login());
 
-class Login extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   @override
-
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Sliding Login',
-      home: HomePage(),
-    );
+  LoginPageState createState() {
+    return LoginPageState();
   }
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  HomePageState createState() {
-    return HomePageState();
-  }
-}
-
-class HomePageState extends State<HomePage>
+class LoginPageState extends State<LoginPage>
     with SingleTickerProviderStateMixin {
   bool isLogin = true;
   Animation<double> loginSize;

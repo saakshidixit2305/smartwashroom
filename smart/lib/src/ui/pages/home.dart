@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_multi_carousel/carousel.dart';
-import 'package:carousel_pro/carousel_pro.dart';
-import 'login1.dart';
+
 
 double uniW;
 double uniH;
@@ -18,7 +16,7 @@ class AppBodyState extends State<AppBody> {
     uniW = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
 
       )
