@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:src/pages/theme.dart' as Theme;
-import 'package:sw2/bubble_indication_painter.dart';
+import "package:sw2/src/ui/pages/login.dart";
+import 'package:sw2/src/ui/pages/bubble_indication_painter.dart';
+import 'package:sw2/src/ui/pages/homepage.dart';
+import 'package:sw2/src/ui/pages/theme.dart' as Theme;
+import 'package:flutter/src/material/colors.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -76,7 +79,7 @@ class _LoginPageState extends State<LoginPage>
                       width: 250.0,
                       height: 191.0,
                       fit: BoxFit.fill,
-                      image: new AssetImage('assets/img/login_logo.png')),
+                      image: new AssetImage('assets/bulb.png')),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20.0),
@@ -422,7 +425,7 @@ class _LoginPageState extends State<LoginPage>
               Padding(
                 padding: EdgeInsets.only(top: 10.0),
                 child: GestureDetector(
-                  onTap: () => showInSnackBar("Google button pressed"),
+                  onTap: () {Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=>HomePage(),));},
                   child: Container(
                     padding: const EdgeInsets.all(15.0),
                     decoration: new BoxDecoration(
