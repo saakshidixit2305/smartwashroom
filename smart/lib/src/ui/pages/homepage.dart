@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: <Widget>[
           Container(
-            height: 175.0,
+            height: uniHeight/4,
 
           decoration: BoxDecoration(
 color: Colors.grey,
