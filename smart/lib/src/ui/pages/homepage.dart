@@ -27,19 +27,27 @@ class _HomePageState extends State<HomePage> {
         title: new Text("Home Page"),
       ),
       body: Container(
+        color: Colors.black,
+
+
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Stack(
+          Container(
+            height: 175.0,
+
+          decoration: BoxDecoration(
+color: Colors.grey,
+              image: DecorationImage(
+              image: AssetImage("assets/night_with_moon.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
+
+    child:  Stack(
+
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/Cherry_Tree_-_Stella.jpg"),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
+
                   Column(
                     children: <Widget>[
                       Text(
@@ -54,8 +62,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                ],
-              ),
+
               Row(
                 children: <Widget>[
                   Chip(
@@ -80,7 +87,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ],
-              ),
+              ), ],
+    ),),
               SizedBox(height: uniHeight / 15),
               Container(
                 padding: EdgeInsets.only(
@@ -93,17 +101,38 @@ class _HomePageState extends State<HomePage> {
                 height: 15.0,
               ),
 
+    GridView.count(
+    crossAxisCount: 2,
+    crossAxisSpacing: 2.0,
+    mainAxisSpacing: 4.0,
+    shrinkWrap: true,
+    children: <Widget>[
+      _buildCardUV(),
+      _buildCardRIM(),
+
+      _buildCardSPRAY(),
+      _buildCardSPRAY(),
             ],
           ),
+    ]
         ),
       ),
-    );
+    )
+      );
+
   }
+
 
 
 
   Widget _buildCardUV() {
     return Card(
+
+
+
+
+
+
       margin: EdgeInsets.all(
         ((1.354 * uniHeight) / 100),
       ),
@@ -130,6 +159,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Hero(
+                      tag: "dash",
                       transitionOnUserGestures: true,
                       child: Image.asset(
                         "assets/bulb.png",
@@ -151,51 +181,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              /*Align(
-                alignment: Alignment.bottomLeft,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    StreamBuilder<String>(
-                      stream: _monitorPageBloc.getHumidityData,
-                      builder: (context, AsyncSnapshot<String> snapshot) {
-                        return snapshot.hasData
-                            ? Text(
-                          "${snapshot.data}",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: ((6.096 * uniHeight) / 100),
-                          ),
-                        )
-                            : Container(
-                          uniHeight: ((2.0 * uniHeight) / 100),
-                          width: ((2.0 * uniHeight) / 100),
-                          child: Center(
-                            child: CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.white,
-                              ),
-                              strokeWidth: 1.7,
-                              backgroundColor: Colors.transparent,
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    Text(
-                      "%",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.normal,
-                        fontSize: ((2.980 * uniHeight) / 100),
-                      ),
-                    ),
-                  ],
-                ),
-              ),*/
+
             ],
           ),
         ),
@@ -221,6 +207,8 @@ class _HomePageState extends State<HomePage> {
       elevation: ((0.406 * uniHeight) / 100),
       child: InkWell(
         child: Container(
+          height: 200,
+          width: 200,
           padding: EdgeInsets.only(
             top: ((2.032 * uniHeight) / 100),
             left: ((2.032 * uniHeight) / 100),
@@ -253,51 +241,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              /*Align(
-                alignment: Alignment.bottomLeft,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    StreamBuilder<String>(
-                      stream: _monitorPageBloc.getTempData,
-                      builder: (context, AsyncSnapshot<String> snapshot) {
-                        return snapshot.hasData
-                            ? Text(
-                          "${snapshot.data}",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: ((6.096 * uniHeight) / 100),
-                          ),
-                        )
-                            : Container(
-                          uniHeight: ((2.0 * uniHeight) / 100),
-                          width: ((2.0 * uniHeight) / 100),
-                          child: Center(
-                            child: CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.white,
-                              ),
-                              strokeWidth: 1.7,
-                              backgroundColor: Colors.transparent,
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    Text(
-                      "°C",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.normal,
-                        fontSize: ((2.980 * uniHeight) / 100),
-                      ),
-                    ),
-                  ],
-                ),
-              ),*/
+
             ],
           ),
         ),
@@ -355,56 +299,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              /*Align(alignment: Alignment.bottomLeft,child: Container(
-    uniHeight: ((8.128 * uniHeight) / 100),
-    width: ((8.128 * uniHeight) / 100),
-    child: StreamBuilder<bool>(
-    initialData: false,
-    stream: _monitorPageBloc.getMotionDetectionEnabledStatus,
-    builder: (BuildContext context,
-    AsyncSnapshot<bool> enabledSnapshot)
-    {
-    if (enabledSnapshot.data)
-    {
-    NativeCalls.startMotionDetectionSocketIOService();
 
-    return StreamBuilder<bool>(
-    initialData: false,
-    stream: _monitorPageBloc.getMotionDetectedStatus,
-    builder: (BuildContext context,
-    AsyncSnapshot<bool> motionDetectionSnapshot) {
-    return FlareActor(
-    motionDetectionSnapshot.data
-    ? _detectedAnimationPath
-        : _notDetectedAnimationPath,
-    animation: motionDetectionSnapshot.data
-    ? _detectedAnimation
-        : _notDetectedAnimation,
-    alignment: Alignment.centerLeft,
-    );
-    },
-    );
-    }
-    else
-    {
-    NativeCalls.stopMotionDetectionSocketIOService();
-
-    return AvatarGlow(
-    glowColor: Colors.red,
-    repeat: true,
-    showTwoGlows: true,
-    endRadius: 35.0,
-    child: Icon(
-    Icons.warning,
-    color: Colors.orange,
-    size: 35.0,
-    ),
-    );
-    }
-    },
-    ),
-    ),
-    ),*/
             ],
           ),
         ),
