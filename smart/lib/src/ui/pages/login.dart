@@ -155,7 +155,7 @@ class _LoginPageState extends State<LoginPage>
             fontSize: 16.0,
             fontFamily: "WorkSansSemiBold"),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       duration: Duration(seconds: 3),
     ));
   }
@@ -336,24 +336,15 @@ class _LoginPageState extends State<LoginPage>
                             fontFamily: "WorkSansBold"),
                       ),
                     ),
-                    onPressed: () =>
-                        showInSnackBar("Login button pressed")),
-              ),
+                    onPressed: () {
+                      showInSnackBar("Login button pressed");
+                      Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=>HomePage(),));
+                    }
+                ),
+              )
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 10.0),
-            child: FlatButton(
-                onPressed: () {},
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.white,
-                      fontSize: 16.0,
-                      fontFamily: "WorkSansMedium"),
-                )),
-          ),
+
           Padding(
             padding: EdgeInsets.only(top: 10.0),
             child: Row(
@@ -374,16 +365,7 @@ class _LoginPageState extends State<LoginPage>
                   width: 100.0,
                   height: 1.0,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.0, right: 15.0),
-                  child: Text(
-                    "Or",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        fontFamily: "WorkSansMedium"),
-                  ),
-                ),
+
                 Container(
                   decoration: BoxDecoration(
                     gradient: new LinearGradient(
@@ -405,40 +387,8 @@ class _LoginPageState extends State<LoginPage>
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 10.0, right: 40.0),
-                child: GestureDetector(
-                  onTap: () => showInSnackBar("Facebook button pressed"),
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    decoration: new BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                    ),
-                    child: new Icon(
-                      FontAwesomeIcons.facebookF,
-                      color: Color(0xFF0084ff),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 10.0),
-                child: GestureDetector(
-                  onTap: () {Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=>HomePage(),));},
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    decoration: new BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                    ),
-                    child: new Icon(
-                      FontAwesomeIcons.google,
-                      color: Color(0xFF0084ff),
-                    ),
-                  ),
-                ),
-              ),
+
+
             ],
           ),
         ],
