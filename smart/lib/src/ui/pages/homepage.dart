@@ -65,15 +65,15 @@ color: Colors.grey,
 
               Row(
                 children: <Widget>[
-                  Chip(
-                    backgroundColor: Colors.white,
-                    label: Text(
-                      "Home",
-                      style: TextStyle(
-                        fontSize: ((2.032 * uniHeight) / 100),
-                        color: Colors.black,
-                      ),
-                    ),
+                  Switch(
+                    value: isSwitched,
+                    onChanged: (value) {
+                      setState(() {
+                        isSwitched = value;
+                      });
+                    },
+                    activeTrackColor: Colors.lightGreenAccent,
+                    activeColor: Colors.green,
                   ),
                   Expanded(
                     child: Container(),
@@ -124,7 +124,7 @@ color: Colors.grey,
 
 
 
-
+bool isSwitched=true;
   Widget _buildCardUV() {
     return Card(
 
@@ -187,7 +187,34 @@ color: Colors.grey,
         ),
         splashColor: Colors.purple[300],
         highlightColor: Colors.deepPurpleAccent,
-        onTap: () {},
+        onTap: () {
+          showDialog(
+              context: context,
+              builder: (context) => new AlertDialog(
+                backgroundColor: Colors.grey,
+                content: Row(
+                  children: <Widget>[
+                    Switch(
+                      value: isSwitched,
+                      onChanged: (value) {
+                        setState(() {
+                          isSwitched = value;
+                        });
+                      },
+                      activeTrackColor: Colors.pinkAccent,
+                      activeColor: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 60.0,
+                    ),
+                    FlatButton(onPressed: (){}, child: null,color: Colors.pinkAccent,)
+                  ],
+                ),
+
+
+              )
+          );
+        },
       ),
     );
   }
@@ -245,7 +272,34 @@ color: Colors.grey,
             ],
           ),
         ),
-        onTap: () {},
+        onTap: () {
+          showDialog(
+              context: context,
+              builder: (context) => new AlertDialog(
+                backgroundColor: Colors.grey,
+                content: Row(
+                  children: <Widget>[
+                    Switch(
+                      value: isSwitched,
+                      onChanged: (value) {
+                        setState(() {
+                          isSwitched = value;
+                        });
+                      },
+                      activeTrackColor: Colors.pinkAccent,
+                      activeColor: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 60.0,
+                    ),
+                    FlatButton(onPressed: (){}, child: null,color: Colors.pinkAccent,)
+                  ],
+                ),
+
+
+              )
+          );
+        },
         splashColor: Colors.purple[300],
         highlightColor: Colors.deepPurpleAccent,
       ),
@@ -303,7 +357,34 @@ color: Colors.grey,
             ],
           ),
         ),
-        onTap: () {},
+        onTap: () {
+          showDialog(
+              context: context,
+              builder: (context) => new AlertDialog(
+                backgroundColor: Colors.grey,
+                content: Row(
+                  children: <Widget>[
+                    Switch(
+                      value: isSwitched,
+                      onChanged: (value) {
+                        setState(() {
+                          isSwitched = value;
+                        });
+                      },
+                      activeTrackColor: Colors.pinkAccent,
+                      activeColor: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 60.0,
+                    ),
+                    FlatButton(onPressed: (){}, child: null,color: Colors.pinkAccent,)
+                  ],
+                ),
+
+
+              )
+          );
+        },
         splashColor: Colors.purple[300],
         highlightColor: Colors.deepPurpleAccent,
       ),
