@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/basic.dart';
+import 'package:flutter/src/widgets/basic.dart';
+import 'package:flutter/src/widgets/basic.dart';
+import 'package:flutter/src/widgets/container.dart';
 //import 'package:share/share.dart';
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,47 +25,58 @@ class _HomePageState extends State<HomePage> {
     uniHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Colors.black,
-        title: new Text("Home Page"),
-      ),
-      body: Container(
-        color: Colors.black,
-
-
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-          Container(
-            height: uniHeight/4,
-
-          decoration: BoxDecoration(
-color: Colors.grey,
-              image: DecorationImage(
-              image: AssetImage("assets/night_with_moon.jpg"),
-          fit: BoxFit.cover,
-        ),
-      ),
-
-    child:  Stack(
-
-                children: <Widget>[
-
-                  Column(
-                    children: <Widget>[
-                      Text(
-                        'Good Evening!',
-                        style: TextStyle(
-                            color: Colors.white, fontSize: uniWidth / 18),
-                      ),
-                      Text(
-                        "Some random dude's name",
-                        style: TextStyle(
-                            color: Colors.white, fontSize: uniWidth / 25),
-                      ),
-                    ],
+        body: Container(
+          color: Colors.black,
+          child: SingleChildScrollView(
+            child: Column(children: <Widget>[
+              Container(
+                height: uniHeight / 2,
+                width: uniWidth,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  image: DecorationImage(
+                    image: AssetImage("assets/night_with_moon.jpg"),
+                    fit: BoxFit.cover,
                   ),
+                ),
+                child: Stack(
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: uniHeight / 12,
+                              bottom: uniHeight / 25,
+                              left: uniWidth / 20),
+                          child: Text(
+                            'Good Evening!',
+                            style: TextStyle(
+                                color: Colors.white, fontSize: uniWidth / 18),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(bottom: uniHeight / 30),
+                          child: Text(
+                            "John Doe",
+                            style: TextStyle(
+                                color: Colors.white, fontSize: uniWidth / 25),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              /*SizedBox(height: uniHeight / 15),*/
+              /*Container(
+            padding:
+                EdgeInsets.only(left: uniWidth / 14.4, right: uniWidth / 14.4),
 
+
+          ),*/
+              /*SizedBox(
+            height: 15.0,
+          ),*/
               Row(
                 children: <Widget>[
                   Switch(
@@ -87,61 +101,31 @@ color: Colors.grey,
                     ),
                   ),
                 ],
-              ), ],
-    ),),
-              SizedBox(height: uniHeight / 15),
-              Container(
-                padding: EdgeInsets.only(
-                    left: uniWidth / 14.4, right: uniWidth / 14.4),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                ),
               ),
-              SizedBox(
-                height: 15.0,
+              GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 2.0,
+                mainAxisSpacing: 4.0,
+                shrinkWrap: true,
+                children: <Widget>[
+                  _buildCardUV(),
+                  _buildCardRIM(),
+                  _buildCardSPRAY(),
+                  _buildCardSPRAY(),
+                ],
               ),
-
-    GridView.count(
-    crossAxisCount: 2,
-    crossAxisSpacing: 2.0,
-    mainAxisSpacing: 4.0,
-    shrinkWrap: true,
-    children: <Widget>[
-      _buildCardUV(),
-      _buildCardRIM(),
-
-      _buildCardSPRAY(),
-      _buildCardSPRAY(),
-            ],
+            ]),
           ),
-    ]
-        ),
-      ),
-    )
-      );
-
+        ));
   }
 
-
-
-bool isSwitched0=true;
-  bool isSwitched1=true;
-  bool isSwitched2=true;
-  bool isSwitched3=true;
-
-
-
-
-
+  bool isSwitched0 = true;
+  bool isSwitched1 = true;
+  bool isSwitched2 = true;
+  bool isSwitched3 = true;
 
   Widget _buildCardUV() {
     return Card(
-
-
-
-
-
-
       margin: EdgeInsets.all(
         ((1.354 * uniHeight) / 100),
       ),
@@ -190,7 +174,6 @@ bool isSwitched0=true;
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -200,6 +183,7 @@ bool isSwitched0=true;
           showDialog(
               context: context,
               builder: (context) => new AlertDialog(
+                title: Text('Enable/Disable'),
                 backgroundColor: Colors.grey,
                 content: Row(
                   children: <Widget>[
@@ -210,19 +194,40 @@ bool isSwitched0=true;
                           isSwitched1 = value;
                         });
                       },
-                      activeTrackColor: Colors.pinkAccent,
+                      activeTrackColor: Colors.black45,
                       activeColor: Colors.white,
                     ),
                     SizedBox(
                       width: 60.0,
                     ),
-                    FlatButton(onPressed: (){}, child: null,color: Colors.pinkAccent,)
+                    FlatButton(
+                      onPressed: () {},
+                      child: Container(
+                        height: uniHeight / 15,
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(top: 2.0),
+                              child: Text(
+                                "Graphical",
+                                style: TextStyle(
+                                    color: Colors.grey, fontSize: 13.0),
+                              ),
+                            ),
+                            Text(
+                              "Analysis",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: 13.0),
+                            )
+                          ],
+                        ),
+                      ),
+                      //child: Text("Graphical"),
+                      color: Colors.black45,
+                    )
                   ],
                 ),
-
-
-              )
-          );
+              ));
         },
       ),
     );
@@ -277,7 +282,6 @@ bool isSwitched0=true;
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -285,29 +289,51 @@ bool isSwitched0=true;
           showDialog(
               context: context,
               builder: (context) => new AlertDialog(
+                title: Text('Enable/Disable'),
                 backgroundColor: Colors.grey,
                 content: Row(
                   children: <Widget>[
                     Switch(
-                      value: isSwitched2,
+                      value: isSwitched1,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched2 = value;
+                          isSwitched1 = value;
                         });
                       },
-                      activeTrackColor: Colors.pinkAccent,
+                      activeTrackColor: Colors.black45,
                       activeColor: Colors.white,
                     ),
                     SizedBox(
                       width: 60.0,
                     ),
-                    FlatButton(onPressed: (){}, child: null,color: Colors.pinkAccent,)
+                    FlatButton(
+                      onPressed: () {},
+                      child: Container(
+                        height: uniHeight / 15,
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(top: 2.0),
+                              child: Text(
+                                "Graphical",
+                                style: TextStyle(
+                                    color: Colors.grey, fontSize: 13.0),
+                              ),
+                            ),
+                            Text(
+                              "Analysis",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: 13.0),
+                            )
+                          ],
+                        ),
+                      ),
+                      //child: Text("Graphical"),
+                      color: Colors.black45,
+                    )
                   ],
                 ),
-
-
-              )
-          );
+              ));
         },
         splashColor: Colors.purple[300],
         highlightColor: Colors.deepPurpleAccent,
@@ -362,7 +388,6 @@ bool isSwitched0=true;
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -370,29 +395,51 @@ bool isSwitched0=true;
           showDialog(
               context: context,
               builder: (context) => new AlertDialog(
+                title: Text('Enable/Disable'),
                 backgroundColor: Colors.grey,
                 content: Row(
                   children: <Widget>[
                     Switch(
-                      value: isSwitched3,
+                      value: isSwitched1,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched3 = value;
+                          isSwitched1 = value;
                         });
                       },
-                      activeTrackColor: Colors.pinkAccent,
+                      activeTrackColor: Colors.black45,
                       activeColor: Colors.white,
                     ),
                     SizedBox(
                       width: 60.0,
                     ),
-                    FlatButton(onPressed: (){}, child: null,color: Colors.pinkAccent,)
+                    FlatButton(
+                      onPressed: () {},
+                      child: Container(
+                        height: uniHeight / 15,
+                        child: Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(top: 2.0),
+                              child: Text(
+                                "Graphical",
+                                style: TextStyle(
+                                    color: Colors.grey, fontSize: 13.0),
+                              ),
+                            ),
+                            Text(
+                              "Analysis",
+                              style: TextStyle(
+                                  color: Colors.grey, fontSize: 13.0),
+                            )
+                          ],
+                        ),
+                      ),
+                      //child: Text("Graphical"),
+                      color: Colors.black45,
+                    )
                   ],
                 ),
-
-
-              )
-          );
+              ));
         },
         splashColor: Colors.purple[300],
         highlightColor: Colors.deepPurpleAccent,
