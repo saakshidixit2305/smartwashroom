@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
           showDialog(
               context: context,
               builder: (context) => new AlertDialog(
-                title: Text('Enable/Disable'),
+                title: Text('Slide to switch Enable/Disable'),
                 backgroundColor: Colors.grey,
                 content: Row(
                   children: <Widget>[
@@ -194,11 +194,11 @@ class _HomePageState extends State<HomePage> {
                           isSwitched1 = value;
                         });
                       },
-                      activeTrackColor: Colors.black45,
+                      activeTrackColor: Colors.lightGreenAccent,
                       activeColor: Colors.white,
                     ),
                     SizedBox(
-                      width: 60.0,
+                      width: 90.0,
                     ),
                     FlatButton(
                       onPressed: () {},
@@ -289,7 +289,7 @@ class _HomePageState extends State<HomePage> {
           showDialog(
               context: context,
               builder: (context) => new AlertDialog(
-                title: Text('Enable/Disable'),
+                title: Text('Slide to switch Enable/Disable'),
                 backgroundColor: Colors.grey,
                 content: Row(
                   children: <Widget>[
@@ -300,11 +300,11 @@ class _HomePageState extends State<HomePage> {
                           isSwitched1 = value;
                         });
                       },
-                      activeTrackColor: Colors.black45,
+                      activeTrackColor: Colors.lightGreenAccent,
                       activeColor: Colors.white,
                     ),
                     SizedBox(
-                      width: 60.0,
+                      width: 90.0,
                     ),
                     FlatButton(
                       onPressed: () {},
@@ -395,7 +395,7 @@ class _HomePageState extends State<HomePage> {
           showDialog(
               context: context,
               builder: (context) => new AlertDialog(
-                title: Text('Enable/Disable'),
+                title: Text('Slide to switch Enable/Disable'),
                 backgroundColor: Colors.grey,
                 content: Row(
                   children: <Widget>[
@@ -406,11 +406,11 @@ class _HomePageState extends State<HomePage> {
                           isSwitched1 = value;
                         });
                       },
-                      activeTrackColor: Colors.black45,
+                      activeTrackColor: Colors.lightGreenAccent,
                       activeColor: Colors.white,
                     ),
                     SizedBox(
-                      width: 60.0,
+                      width: 90.0,
                     ),
                     FlatButton(
                       onPressed: () {},
