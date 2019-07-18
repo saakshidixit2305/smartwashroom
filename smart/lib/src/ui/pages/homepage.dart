@@ -66,10 +66,10 @@ color: Colors.grey,
               Row(
                 children: <Widget>[
                   Switch(
-                    value: isSwitched,
+                    value: isSwitched0,
                     onChanged: (value) {
                       setState(() {
-                        isSwitched = value;
+                        isSwitched0 = value;
                       });
                     },
                     activeTrackColor: Colors.lightGreenAccent,
@@ -124,7 +124,16 @@ color: Colors.grey,
 
 
 
-bool isSwitched=true;
+bool isSwitched0=true;
+  bool isSwitched1=true;
+  bool isSwitched2=true;
+  bool isSwitched3=true;
+
+
+
+
+
+
   Widget _buildCardUV() {
     return Card(
 
@@ -195,10 +204,10 @@ bool isSwitched=true;
                 content: Row(
                   children: <Widget>[
                     Switch(
-                      value: isSwitched,
+                      value: isSwitched1,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched = value;
+                          isSwitched1 = value;
                         });
                       },
                       activeTrackColor: Colors.pinkAccent,
@@ -280,10 +289,10 @@ bool isSwitched=true;
                 content: Row(
                   children: <Widget>[
                     Switch(
-                      value: isSwitched,
+                      value: isSwitched2,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched = value;
+                          isSwitched2 = value;
                         });
                       },
                       activeTrackColor: Colors.pinkAccent,
@@ -365,10 +374,10 @@ bool isSwitched=true;
                 content: Row(
                   children: <Widget>[
                     Switch(
-                      value: isSwitched,
+                      value: isSwitched3,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched = value;
+                          isSwitched3 = value;
                         });
                       },
                       activeTrackColor: Colors.pinkAccent,
