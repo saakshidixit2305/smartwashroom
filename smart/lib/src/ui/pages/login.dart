@@ -74,10 +74,14 @@ class _LoginPageState extends State<LoginPage>
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(top: 75.0),
-
+                  child: new Image(
+                      width: 145.0,
+                      height: 145.0,
+                      fit: BoxFit.fill,
+                      image: new AssetImage('assets/15636550968347231.gif')),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 125),
+                  padding: EdgeInsets.only(top: 20.0),
                   child: _buildMenuBar(context),
                 ),
                 Expanded(
