@@ -171,6 +171,32 @@ class _HomePageState extends State<HomePage> {
                         fontSize: ((1.71 * uniHeight) / 100),
                       ),
                     ),
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "85",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: ((6.096 * uniHeight) / 80),
+                            ),
+                          ),
+                          Text(
+                            "%",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal,
+                              fontSize: ((2.980 * uniHeight) / 100),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -279,6 +305,32 @@ class _HomePageState extends State<HomePage> {
                         fontSize: ((1.71 * uniHeight) / 100),
                       ),
                     ),
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "ON",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: ((6.096 * uniHeight) / 80),
+                            ),
+                          ),
+                          /*Text(
+                            "%",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal,
+                              fontSize: ((2.980 * uniHeight) / 100),
+                            ),
+                          ),*/
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -383,6 +435,32 @@ class _HomePageState extends State<HomePage> {
                         fontFamily: 'CardName_Arial',
                         //color: Pigment.fromString("#c9c7cd"),
                         fontSize: ((1.71 * uniHeight) / 100),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "92",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: ((6.096 * uniHeight) / 80),
+                            ),
+                          ),
+                          Text(
+                            "%",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal,
+                              fontSize: ((2.980 * uniHeight) / 100),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
